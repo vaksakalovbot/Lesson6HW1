@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         greenValueLabel.textColor = .green
         blueValueLabel.textColor = .blue
 
-        colorView.backgroundColor = UIColor(displayP3Red: currentR, green: currentG, blue: currentB, alpha: 1.0)
+        colorView.backgroundColor = UIColor(red: currentR, green: currentG, blue: currentB, alpha: 1.0)
     }
     
     override func viewDidLayoutSubviews() {
@@ -61,19 +61,19 @@ class ViewController: UIViewController {
     @IBAction func redSliderChanged() {
         currentR = CGFloat(redSlider.value)
         redValueLabel.text = String(format: "%.2f", currentR)
-        colorView.backgroundColor = UIColor(displayP3Red: currentR, green: currentG, blue: currentB, alpha: 1.0)
+        colorView.backgroundColor = UIColor(red: currentR, green: currentG, blue: currentB, alpha: 1.0)
     }
     
     @IBAction func greenSliderChanged() {
         currentG = CGFloat(greenSlider.value)
         greenValueLabel.text = String(format: "%.2f", currentG)
-        colorView.backgroundColor = UIColor(displayP3Red: currentR, green: currentG, blue: currentB, alpha: 1.0)
+        colorView.backgroundColor = UIColor(red: currentR, green: currentG, blue: currentB, alpha: 1.0)
     }
     
     @IBAction func blueSliderChanged() {
         currentB = CGFloat(blueSlider.value)
         blueValueLabel.text = String(format: "%.2f", currentB)
-        colorView.backgroundColor = UIColor(displayP3Red: currentR, green: currentG, blue: currentB, alpha: 1.0)
+        colorView.backgroundColor = UIColor(red: currentR, green: currentG, blue: currentB, alpha: 1.0)
     }
 }
 
