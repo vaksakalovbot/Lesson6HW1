@@ -12,7 +12,6 @@
 		D4492FFF24795E970063B686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4492FFD24795E970063B686 /* Main.storyboard */; };
 		D449300124795E980063B686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D449300024795E980063B686 /* Assets.xcassets */; };
 		D449300424795E980063B686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D449300224795E980063B686 /* LaunchScreen.storyboard */; };
-		D449300E24798D1D0063B686 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D449300D24798D1D0063B686 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		D449300024795E980063B686 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D449300324795E980063B686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D449300524795E980063B686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D449300D24798D1D0063B686 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				D4492FF724795E970063B686 /* AppDelegate.swift */,
-				D449300D24798D1D0063B686 /* SceneDelegate.swift */,
 				D4492FFB24795E970063B686 /* ViewController.swift */,
 				D4492FFD24795E970063B686 /* Main.storyboard */,
 				D449300024795E980063B686 /* Assets.xcassets */,
@@ -140,7 +137,6 @@
 			files = (
 				D4492FFC24795E970063B686 /* ViewController.swift in Sources */,
 				D4492FF824795E970063B686 /* AppDelegate.swift in Sources */,
-				D449300E24798D1D0063B686 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +283,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 883VHW277J;
 				INFOPLIST_FILE = Lesson2HW1/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +302,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 883VHW277J;
 				INFOPLIST_FILE = Lesson2HW1/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
