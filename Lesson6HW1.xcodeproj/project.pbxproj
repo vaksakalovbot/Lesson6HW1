@@ -56,29 +56,45 @@
 		D4492FF624795E970063B686 /* Lesson6HW1 */ = {
 			isa = PBXGroup;
 			children = (
-				D4492FF724795E970063B686 /* AppDelegate.swift */,
 				E783BD3C248A768600B72B3E /* ViewControllers */,
-				D449300024795E980063B686 /* Assets.xcassets */,
-				E783BD39248A6DC300B72B3E /* Storyboars */,
-				D449300524795E980063B686 /* Info.plist */,
+				E783BD39248A6DC300B72B3E /* Storyboards */,
+				E7805762248ADF9B00CBCDA1 /* Resources */,
+				E7805763248ADFC800CBCDA1 /* Supporting */,
 			);
 			path = Lesson6HW1;
 			sourceTree = "<group>";
 		};
-		E783BD39248A6DC300B72B3E /* Storyboars */ = {
+		E7805762248ADF9B00CBCDA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D449300024795E980063B686 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E7805763248ADFC800CBCDA1 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				D449300524795E980063B686 /* Info.plist */,
+				D4492FF724795E970063B686 /* AppDelegate.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		E783BD39248A6DC300B72B3E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				D4492FFD24795E970063B686 /* Main.storyboard */,
 				D449300224795E980063B686 /* LaunchScreen.storyboard */,
 			);
-			path = Storyboars;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		E783BD3C248A768600B72B3E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D4492FFB24795E970063B686 /* ColorChangeViewController.swift */,
 				E783BD3A248A767D00B72B3E /* FirstScreenViewController.swift */,
+				D4492FFB24795E970063B686 /* ColorChangeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -302,8 +318,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 883VHW277J;
-				INFOPLIST_FILE = Lesson6HW1/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_FILE = Lesson6HW1/Supporting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +337,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 883VHW277J;
-				INFOPLIST_FILE = Lesson6HW1/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_FILE = Lesson6HW1/Supporting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

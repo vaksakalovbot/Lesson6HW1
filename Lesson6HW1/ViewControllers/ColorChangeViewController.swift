@@ -13,7 +13,7 @@ protocol ChangeColorDelegate {
 }
 
 class ColorChangeViewController: UIViewController {
-
+    
     @IBOutlet var colorView: UIView!
     
     @IBOutlet var redSlider: UISlider!
@@ -33,19 +33,24 @@ class ColorChangeViewController: UIViewController {
     var currentB : CGFloat!
     
     var delegate: ChangeColorDelegate!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         initAllVariables()
+        
         addDoneButtonToKeyboard()
         
-        colorView.backgroundColor = UIColor(red: currentR, green: currentG, blue: currentB, alpha: 1.0)
+        colorView.backgroundColor = UIColor(red: currentR,
+                                            green: currentG,
+                                            blue: currentB,
+                                            alpha: 1.0)
     }
     
     override func viewDidLayoutSubviews() {
         colorView.layer.cornerRadius = min(colorView.frame.height, colorView.frame.width) / 8
     }
-
+    
     @IBAction func anySliderChanged(_ sender: UISlider) {
         switch sender {
         case redSlider:
@@ -63,14 +68,17 @@ class ColorChangeViewController: UIViewController {
         default:
             break
         }
-        colorView.backgroundColor = UIColor(red: currentR, green: currentG, blue: currentB, alpha: 1.0)
+        colorView.backgroundColor = UIColor(red: currentR,
+                                            green: currentG,
+                                            blue: currentB,
+                                            alpha: 1.0)
     }
-        
+    
     @IBAction func doneButtonPressed() {
         delegate.changeColor(redValue: currentR, greenValue: currentG, blueValue: currentB)
         dismiss(animated: true)
     }
-
+    
     private func initAllVariables() {
         redSlider.minimumValue = 0.0
         redSlider.maximumValue = 1.0
@@ -87,7 +95,7 @@ class ColorChangeViewController: UIViewController {
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
-
+        
         redValueLabel.text = String(format: "%.2f", currentR)
         greenValueLabel.text = String(format: "%.2f", currentG)
         blueValueLabel.text = String(format: "%.2f", currentB)
@@ -95,7 +103,7 @@ class ColorChangeViewController: UIViewController {
         redTextField.text = redValueLabel.text
         greenTextField.text = greenValueLabel.text
         blueTextField.text = blueValueLabel.text
-
+        
         redValueLabel.textColor = .red
         greenValueLabel.textColor = .green
         blueValueLabel.textColor = .blue
@@ -104,7 +112,7 @@ class ColorChangeViewController: UIViewController {
         greenTextField.delegate = self
         blueTextField.delegate = self
     }
-
+    
     private func addDoneButtonToKeyboard() {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -120,7 +128,7 @@ class ColorChangeViewController: UIViewController {
         blueTextField.inputAccessoryView = toolBar
     }
     
-    func changeSlidersValues(_ textField: UITextField) {
+    private func changeSlidersValues(_ textField: UITextField) {
         switch textField {
         case redTextField:
             if let curR = Float(textField.text ?? "") {
@@ -144,7 +152,10 @@ class ColorChangeViewController: UIViewController {
             break
         }
         
-        colorView.backgroundColor = UIColor(red: currentR, green: currentG, blue: currentB, alpha: 1.0)
+        colorView.backgroundColor = UIColor(red: currentR,
+                                            green: currentG,
+                                            blue: currentB,
+                                            alpha: 1.0)
     }
     
     @objc func doneKeyboardPressed() {
@@ -153,12 +164,12 @@ class ColorChangeViewController: UIViewController {
 }
 
 extension ColorChangeViewController: UITextFieldDelegate {
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-
+    
     func textFieldDidEndEditing(_ textField: UITextField  ) {
         changeSlidersValues(textField)
     }
@@ -166,11 +177,11 @@ extension ColorChangeViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let currentText = textField.text ?? ""
-
+        
         guard let stringRange = Range(range, in: currentText) else { return false }
-
+        
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
-
+        
         return updatedText.count <= 4
     }
 }
